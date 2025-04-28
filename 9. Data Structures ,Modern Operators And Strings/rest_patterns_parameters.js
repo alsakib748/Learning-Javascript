@@ -73,3 +73,53 @@ add(...x);
 restaurant.orderPizza("Mushrooms", "Spinach", "Olives", "Cheese");
 
 restaurant.orderPizza("Mushrooms");
+
+restaurant.numGuests = 0;
+
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
+
+console.log("Hello" && 23 && null && "Jonas");
+
+console.log("The Nullish Coalesing Operator");
+
+restaurant.numGuests = 0;
+const guests3 = restaurant.numGuests || 10;
+console.log(guests3);
+
+// todo: Nullish : null and undefined (NOT 0 or '')
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect);
+
+console.log("Logical Assignment Operators");
+
+const rest1 = {
+  name: "Capri",
+  // numGuests: 20,
+  numGuests: 0
+};
+
+const rest2 = {
+  name: "La Piazza",
+  owner: "Giovanni Rossi"
+};
+
+//  OR Assignment operator
+// rest1.numGuests = rest1.numGuests || 10;
+// rest2.numGuests = rest2.numGuests || 10;
+
+//  nullish assignment operator
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
+rest1.owner = rest1.owner && "<ANONYMOUS>";
+rest2.owner = rest2.owner && "<ANONYMOUS>";
+
+rest1.owner &&= "<ANONYMOUS>";
+rest2.owner &&= "<ANONYMOUS>";
+
+console.log(rest1);
+console.log(rest2);
